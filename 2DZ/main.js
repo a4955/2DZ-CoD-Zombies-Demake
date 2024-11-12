@@ -22,3 +22,4 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+// todo, pretty sure this is a holdover
