@@ -24,15 +24,6 @@ function startGame() {
 window.onload = startGame();
 
 
-// old
-// var game = new Phaser.Game(config);
-// var player;
-
-// let inputUp;
-// let inputDown;
-// let inputLeft;
-// let inputRight;
-
 // test for custom controls
 // function updateControls (
 //     newUp = Phaser.Input.Keyboard.KeyCodes.W, 

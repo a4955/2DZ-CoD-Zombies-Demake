@@ -1,14 +1,11 @@
 import Phaser from 'phaser';
 
-export default class MainMenu extends Phaser.Scene
-{
-    constructor ()
-    {
+export default class MainMenu extends Phaser.Scene {
+    constructor() {
         super('MainMenu');
     }
 
-    create () 
-    {
+    create() {
         // this.input.keyboard.once ()
         // {
         this.scene.start('Gameplay')
