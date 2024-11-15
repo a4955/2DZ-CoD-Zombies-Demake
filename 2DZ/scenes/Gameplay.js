@@ -20,8 +20,8 @@ export default class Gameplay extends Phaser.Scene {
         this.zombies = this.physics.add.group();
         this.physics.add.collider(this.zombies, this.player)
 
-        const kh = new KeyHandler(this);
-        this.keyObject = kh.getKeys();
+        this.keys = new KeyHandler(this);
+        this.keys.setKeys('shoot', 'lmb')
 
         this.text = this.add.text(10, 10, '', { fill: '#00ff00' }).setDepth(1);
         this.input.mouse.disableContextMenu();
@@ -40,27 +40,27 @@ export default class Gameplay extends Phaser.Scene {
         //     `mmb: ${pointer.middleButtonDown()}`
         // ]);
         
-        // if (pointer.leftButtonDown) 
-        // {
-        //     var zombie = this.zombies.create(pointer.worldX, pointer.worldY, 'star');
-        // }
+        if (this.keys.isDown('shoot')) 
+        {
+            var zombie = this.zombies.create(pointer.worldX, pointer.worldY, 'star');
+        }
         
-        if (this.keyObject.left.isDown) {
+        if (this.keys.isDown('left')) {
             this.player.setVelocityX(-160);
 
         }
-        else if (this.keyObject.right.isDown) {
+        else if (this.keys.isDown('right')) {
             this.player.setVelocityX(160);
 
         }
         else {
             this.player.setVelocityX(0);
         }
-        if (this.keyObject.up.isDown) {
+        if (this.keys.isDown('up')) {
             this.player.setVelocityY(-160);
 
         }
-        else if (this.keyObject.down.isDown) {
+        else if (this.keys.isDown('down')) {
             this.player.setVelocityY(160);
         }
         else {

@@ -8,8 +8,6 @@ const defaultControls = {
     'shoot' : "lmb"
 }
 
-const pointer = this.input.activePointer;
-
 export default class KeyHandler {
     constructor(scene, customControls = null) {
         this.scene = scene;
@@ -21,10 +19,28 @@ export default class KeyHandler {
         }
 
         this.keyObjects = this.scene.input.keyboard.addKeys(this.controls);
+        
+        this.pointer = scene.input.activePointer;
+        // console.dir(pointer)
+        // console.log(Object.getOwnPropertyNames(pointer))
     }
 
     getKeys() {
         return this.keyObjects;
+    }
+
+    isDown(input) {
+        switch (this.controls[input]) { 
+            case 'lmb':
+                return this.pointer.leftButtonDown()
+            case 'rmb':
+                return this.pointer.rightButtonDown()
+            case 'mmb':
+                return this.pointer.middleButtonDown()
+            default: 
+                return this.keyObjects[input].isDown
+            }
+        
     }
 
     // removeKey(input) {
