@@ -5,7 +5,8 @@ const defaultControls = {
     'down' : "S",
     'left' : "A",
     'right' : "D",
-    'shoot' : "lmb"
+    'shoot' : "lmb",
+    'ads' : "rmb",
 }
 
 export default class KeyHandler {
@@ -38,9 +39,16 @@ export default class KeyHandler {
             default: 
                 return this.keyObjects[input].isDown
             }
-        
     }
 
+    getPointerX() {
+        return this.pointer.worldX;
+    }
+
+    getPointerY() {
+        return this.pointer.worldY;
+    }
+    
     // removeKey(input) {
     //     this.keyObjects[input] = null;
     // } TODO: 

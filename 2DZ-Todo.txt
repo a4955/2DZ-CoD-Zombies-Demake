@@ -1,0 +1,26 @@
+TODO:
+
+player:
+-ads
+-bullet spread
+-sprint
+-ammo/reload
+-animations (still dev art tho)
+-change guns
+
+add interactable world elements
+points/buyables
+
+make player and zombies hitboxes circles
+make player sprite be on top of zombie sprites (esp dead ones)
+make player be able to push zombies much less
+
+levels
+
+menu
+
+zombies:
+spawning/rounds
+
+ui:
+-debug text for now

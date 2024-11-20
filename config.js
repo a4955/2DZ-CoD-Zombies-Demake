@@ -13,5 +13,10 @@ export default {
         arcade: {
             debug: false
         }
-    },    
+    },
+    // fps: {
+    //     target: 165,
+    //     min: 30,
+    //     forceSetTimeOut: true,
+    // } // TODO: make a framerate option
 };

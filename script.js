@@ -22,18 +22,3 @@ function startGame() {
 }
 
 window.onload = startGame();
-
-
-// test for custom controls
-// function updateControls (
-//     newUp = Phaser.Input.Keyboard.KeyCodes.W, 
-//     newDown = Phaser.Input.Keyboard.KeyCodes.S, 
-//     newLeft = Phaser.Input.Keyboard.KeyCodes.A, 
-//     newRight = Phaser.Input.Keyboard.KeyCodes.D
-// )
-// {
-//     inputLeft = this.input.keyboard.addKey(newLeft);
-//     inputDown = this.input.keyboard.addKey(newDown);
-//     inputRight = this.input.keyboard.addKey(newRight);
-//     inputUp = this.input.keyboard.addKey(newUp);
-//}
